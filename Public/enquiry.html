@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(222, 333, 210);
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        
+        th {
+            text-align: left;
+            background-color: #f2f2f2;
+        }
+        
+        input[type="text"], input[type="tel"], input[type="date"], textarea, input[type="email"] {
+            width: 96%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+     
+    <form action="/submit-form" method="post">
+        <h1 style="text-align: center;">Faiz-e-Aam IT Center | Study Center</h1>
+        <h2 style="text-align: center;"><u>ENQUIRY</u></h2>
+        <table style="width: 50%" align="center">
+
+            <!-- Email Field Added Here -->
+            <tr>
+                <td>Email</td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+
+            <tr>
+                <td>Applicant's Full Name</td>
+                <td><input type="text" id="fullName" name="fullName" required></td>
+            </tr>
+            <tr>
+                <td>Enquiry Date</td>
+                <td><input type="date" id="enquiryDate" name="enquiryDate" required></td>
+            </tr>
+            <tr>
+                <td>Contact No</td>
+                <td><input type="tel" id="contactNo" name="contactNo" required></td>
+            </tr>
+            <tr>
+                <td>Residential Area</td>
+                <td><input type="text" id="residentialArea" name="residentialArea" required></td>
+            </tr>
+            <tr>
+                <td>Referenced By</td>
+                <td><input type="text" id="referencedBy" name="referencedBy" required></td>
+            </tr>
+            <tr>
+                <td>Academic Qualification</td>
+                <td><input type="radio" id="undergraduate" name="academicQualification" value="Undergraduate" required>
+                    <label for="undergraduate">Undergraduate</label>
+                    <input type="radio" id="graduate" name="academicQualification" value="Graduate">
+                    <label for="graduate">Graduate</label>
+                    <input type="radio" id="graduateBacklogs" name="academicQualification" value="Graduate with Backlogs/KT">
+                    <label for="graduateBacklogs">Graduate with Backlogs/KT</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Qualification Details</td>
+                <td>
+                    <div style="display: flex; gap: 10px;">
+                        <div><p>Name of School/College/University</p></div>
+                        <div><p>Percentage/CGPA</p></div>
+                        <div><p>Year of Passing</p></div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>SSC</td>
+                <td>
+                    <div style="display: flex; gap: 10px;">
+                        <div style="flex: 1;">
+                            <input type="text" id="ssc" name="ssc" placeholder="Name of School/College/University" style="width: 100%; padding: 5px; box-sizing: border-box;">
+                        </div>
+                        <div style="flex: 1;">
+                            <input type="text" id="sscPercentage" name="sscPercentage" placeholder="Percentage/CGPA" style="width: 100%; padding: 5px; box-sizing: border-box;">
+                        </div>
+                        <div style="flex: 1;">
+                            <input type="text" id="sscYear" name="sscYear" placeholder="Year of Passing" style="width: 100%; padding: 5px; box-sizing: border-box;">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>HSC</td>
+                <td>
+                    <div style="display: flex; gap: 10px;">
+                        <div style="flex: 1;">
+                            <input type="text" id="hscName" name="hscName" placeholder="Name of School/College/University" style="width: 100%; padding: 5px; box-sizing: border-box;">
+                        </div>
+                        <div style="flex: 1;">
+                            <input type="text" id="hscPercentage" name="hscPercentage" placeholder="Percentage/CGPA" style="width: 100%; padding: 5px; box-sizing: border-box;">
+                        </div>
+                        <div style="flex: 1;">
+                            <input type="text" id="hscYear" name="hscYear" placeholder="Year of Passing" style="width: 100%; padding: 5px; box-sizing: border-box;">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Graduate</td>
+                <td>
+                    <div style="display: flex; gap: 10px;">
+                        <div style="flex: 1;">
+                            <input type="text" id="graduateName" name="graduateName" placeholder="Name of School/College/University" style="width: 100%; padding: 5px; box-sizing: border-box;">
+                        </div>
+                        <div style="flex: 1;">
+                            <input type="text" id="graduatePercentage" name="graduatePercentage" placeholder="Percentage/CGPA" style="width: 100%; padding: 5px; box-sizing: border-box;">
+                        </div>
+                        <div style="flex: 1;">
+                            <input type="text" id="graduateYear" name="graduateYear" placeholder="Year of Passing" style="width: 100%; padding: 5px; box-sizing: border-box;">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Post Graduate</td>
+                <td>
+                    <div style="display: flex; gap: 10px;">
+                        <div style="flex: 1;">
+                            <input type="text" id="postGraduateName" name="postGraduateName" placeholder="Name of School/College/University" style="width: 100%; padding: 5px; box-sizing: border-box;">
+                        </div>
+                        <div style="flex: 1;">
+                            <input type="text" id="postGraduatePercentage" name="postGraduatePercentage" placeholder="Percentage/CGPA" style="width: 100%; padding: 5px; box-sizing: border-box;">
+                        </div>
+                        <div style="flex: 1;">
+                            <input type="text" id="postGraduateYear" name="postGraduateYear" placeholder="Year of Passing" style="width: 100%; padding: 5px; box-sizing: border-box;">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Any Other Course</td>
+                <td><input type="text" id="otherCourse" placeholder="Enter any other course..." name="otherCourse"></td>
+            </tr>
+            <tr>
+                <td>Any Other Remarks</td>
+                <td><textarea id="remarks" name="remarks" placeholder="Enter any additional information here..."></textarea></td>
+            </tr>
+        </table>
+
+        <br>
+        <div style="display: flex; justify-content: center;">
+            <input style="background-color: cadetblue; border: none; padding: 10px;" type="submit" value="Submit">
+        </div>
+
+    </form>
+</body>
+</html>

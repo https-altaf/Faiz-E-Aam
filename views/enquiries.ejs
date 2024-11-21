@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiries</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Enquiry Data</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Email</th>
+        <th>Full Name</th>
+        <th>Enquiry Date</th>
+        <th>Contact No</th>
+        <th>Residential Area</th>
+        <th>Referenced By</th>
+        <th>Academic Qualification</th>
+        <th>SSC</th>
+        <th>SSC Percentage</th>
+        <th>SSC Year</th>
+        <th>HSC Name</th>
+        <th>HSC Percentage</th>
+        <th>HSC Year</th>
+        <th>Graduate Name</th>
+        <th>Graduate Percentage</th>
+        <th>Graduate Year</th>
+        <th>Post Graduate Name</th>
+        <th>Post Graduate Percentage</th>
+        <th>Post Graduate Year</th>
+        <th>Other Course</th>
+        <th>Remarks</th>
+    </tr>
+
+    <% if (enquiries.length > 0) { %>
+        <% enquiries.forEach(function(item) { %>
+            <tr>
+                <td><%= item.id %></td>
+                <td><%= item.email %></td>
+                <td><%= item.fullName %></td>
+                <td><%= item.enquiryDate %></td>
+                <td><%= item.contactNo %></td>
+                <td><%= item.residentialArea %></td>
+                <td><%= item.referencedBy %></td>
+                <td><%= item.academicQualification %></td>
+                <td><%= item.ssc %></td>
+                <td><%= item.sscPercentage %></td>
+                <td><%= item.sscYear %></td>
+                <td><%= item.hscName %></td>
+                <td><%= item.hscPercentage %></td>
+                <td><%= item.hscYear %></td>
+                <td><%= item.graduateName %></td>
+                <td><%= item.graduatePercentage %></td>
+                <td><%= item.graduateYear %></td>
+                <td><%= item.postGraduateName %></td>
+                <td><%= item.postGraduatePercentage %></td>
+                <td><%= item.postGraduateYear %></td>
+                <td><%= item.otherCourse %></td>
+                <td><%= item.remarks %></td>
+            </tr>
+        <% }); %>
+    <% } else { %>
+        <tr>
+            <td colspan="21">No enquiries available.</td>
+        </tr>
+    <% } %>
+</table>
+
+</body>
+</html>

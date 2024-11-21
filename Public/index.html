@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: burlywood;
+            margin: 0;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            width: 90%;
+            max-width: 1200px;
+            height: auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: white;
+        }
+        
+        .left {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: #4CAF50; /* Green background */
+        }
+        
+        .left .landing-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+        
+        .right {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: burlywood;
+        }
+        
+        .right h1 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .right p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .button {
+            background-color: #af944c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            align-self: center;
+        }
+        
+        .button:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        .button:active {
+            background-color: #3e8e41;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+            }
+            
+            .left, .right {
+                flex: none;
+                width: 100%;
+            }
+            
+            .right h1 {
+                font-size: 1.8rem;
+            }
+            
+            .right p {
+                font-size: 0.9rem;
+            }
+            
+            .button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .right h1 {
+                font-size: 1.5rem;
+            }
+            
+            .right p {
+                font-size: 0.8rem;
+            }
+            
+            .button {
+                padding: 8px 16px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="./Images/StudyForFaizeamm.jpg" alt="Landing Image" class="landing-image">
+        </div>
+        <div class="right">
+            <h1>Welcome To Faiz-E-Aam</h1>
+            <p>Your perfect place for learning and growing.</p>
+            <div>
+                <button class="button" onclick="window.location.href='/enquiry.html'">Go to Enquiry Form</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
