@@ -31,8 +31,9 @@ app.use(
 );
 
 // Static admin credentials
-const ADMIN_USERNAME = 'admin';
-const ADMIN_PASSWORD = 'admin';
+// Get credentials from .env file
+const ADMIN_USERNAME = process.env.ADMIN_USERNAME;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
 app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'login.html')); // Path to your login page
