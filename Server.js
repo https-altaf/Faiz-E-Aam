@@ -10,7 +10,7 @@ const db = require('./Db_Config/DB');
 const app = express();
 
 // Use the PORT from .env file
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 // Middleware to parse form data
 app.use(bodyParser.urlencoded({ extended: true }));
